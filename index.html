@@ -1,0 +1,685 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>HTML</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" href="css/presentation.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>HTML</h1>
+                    <h2>Utn Rosario</h2>
+                    <h3>TTADS</h3>
+                    <p>
+                      Técnicas y Tecnologías Avanzadas de Desarrollo de Software.
+                    </p>
+                    <h4>Ing. Andres Otaduy</h4>
+                    <a href="https://github.com/aotaduy">https://github.com/aotaduy</a>
+                    <p>
+                      <img src="img/profile.png" alt="profile"/>
+                    </p>
+                </section>
+                <section>
+                  <section>
+                    <h2>Que es la WWW</h2>
+                    <p>
+                      La World Wide Web (Web), es una red de recursos de información.
+                    </p>
+                    <ol>
+                      <li>Un esquema uniforme de nombres para localizar recursos en la Web (p.ej., URIs).</li>
+                      <li>Protocolos, para acceder a recursos con nombre en la Web (p.ej., HTTP).</li>
+                      <li>Hipertexto, para navegar fácilmente entre recursos (p.ej., HTML).</li>
+                      </ol>
+                  </section>
+            <section data-markdown>
+                <script type="text/template">
+                    #HTML, CSS, JS
+                    Separacion de Contentido, Estructura, Presentacion y Comportamiento
+                    Elementos de HTML
+                      - Tags, Elementos, Atributos
+                      - Estructura de una pagina web
+                </script>
+
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    #HTML, CSS, JS
+                    ## Estructura de una pagina web
+                    - html
+                      - head
+                        - title
+                        - link scripts, meta, base
+                      - body
+                        - al menos un elemento block section, div, p
+                        - elementos inline a span img
+                </script>
+            </section>
+            <section>
+              <h2>Elementos Importantes</h2>
+              <ul>
+                <li> h1 h2 h3 h4 .. h6</li>
+                <li>parrafo: p</li>
+                <li> <a href="http://www.google.com">a</a></li>
+                <li><img src="img/profile.png" alt="imageb" /> img </li>
+                <li>div <span>span</span></li>
+                <li>ul ol li para listas</li>
+                <p>
+                  Esto es un parrafo
+                </p>
+                <p>
+                  Esto es otro parrafo
+                </p>
+                <div style="width: 50px ; height: 50px; background: red">
+                  div
+                </div>
+              </ul>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              <p>
+                Crear una pagina web con las incumbencias de nuestra carrera <a href="http://www.frro.utn.edu.ar/contenido.php?cont=227&subc=26">http://www.frro.utn.edu.ar/contenido.php?cont=227&subc=26</a>
+                Agregar una imagen alusiva a la carrera en la misma.
+              </p>
+              <pre>
+                Instalar node
+                correr
+                npm install -g http-server
+                y para inicar el servidor web en la carpeta
+                http-server
+              </pre>
+            </section>
+            <section>
+              <h1>Class e Ids</h1>
+              <p>
+                Class e Ids son atributos universales. Se pueden aplicar a casi todos los elementos de HTML
+              </p>
+              <ul>
+                <li><code>id</code> representa un identificador unico de un elemento.</li>
+                <li><code>class</code> permite especificar un conjunto de nombre de tipo de elemento.</li>
+              </ul>
+            </section>
+            <section>
+              <h1>CSS</h1>
+              <ul>
+                <li>
+                  Hojas de estilo en cascada, Autor, Usuario, User Agent
+                </li>
+                <li>
+                  Define la representacion grafica de los elementos de HTML
+                </li>
+                <li>reglas: selector {declaracion}</li>
+                <li>embebidas  <code>style </code> o en un archivo externo <code>link</code> </li>
+                <li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
+              </ul>
+            </section>
+            <section>
+              <h1>Selectores CSS</h1>
+              <ul>
+                <li>* Cualquier elemento</li>
+                <li>tipo: E ej: a | span | div</li>
+                <li>Descendiente: E F a span | h1 a </li>
+                <li>Hijo: E &gt; F ejemplo li &gt; a</li>
+                <li>Pseudo classes: a:visited, a:active a:hover</li>
+                <li>Precedente: E+F</li>
+                <li>Atributo: E[foo] o E[foo="pepe"]</li>
+                <li>Id: E#id</li>
+                <li>Clase: E.class </li>
+              </ul>
+            </section>
+            <section>
+              <h1>Precedencia</h1>
+              <ul>
+                <li>Espcifidad de un elemento id, class, element</li>
+                <li>!important</li>
+              </ul>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              <p>
+                Tomar las primeras tres noticias del diario <a href="http://www.lanacion.com.ar">La nacion</a> y crear.
+                <ul>
+                  <li>Una Pagina para la portada que contenga estas tres notas, destacando la primera</li>
+                  <li>Una pagina para cada nota vinculadas desde la pagina inicial.</li>
+                  <li>En cada pagina crear un menu que vincule con las otras notas.</li>
+                </ul>
+                <p>
+                  Todas las paginas deben respetar el principio de separacion de contenido, estructura, presentacion y comportamiento.
+                </p>
+              </p>
+            </section>
+            <section>
+              <h1>Box model</h1>
+              <ul>
+                <li>width - height</li>
+                <li>padding</li>
+                <li>border</li>
+                <li>margin</li>
+              </ul>
+              <div style="padding: 40px; border: 5px solid black; background: gray;">
+                <div style="width:150px; height:100px; margin: 20px; border: 10px solid blue; padding 20px; background: red;">
+                </div>
+              </div>
+            </section>
+              <section>
+                <h1>Display</h1>
+                <ul>
+                  <li>inline</li>
+                  <li>block</li>
+                </ul>
+                <a href="http://es.learnlayout.com/display.html"> http://es.learnlayout.com/display.html</a>
+              </section>
+              <section>
+                <h1>Position</h1>
+                <a href="http://es.learnlayout.com/position.html">http://es.learnlayout.com/position.html</a>
+              </section>
+          </section>
+          <section>
+            <section>
+              <h1>Responsive Web</h1>
+              <p>
+                La mayoria de los usuarios accede a internet a traves de dispositivos mobiles.
+                <a href="https://www.consumerbarometer.com/en/graph-builder/?question=M1&filter=country:argentina">estadisticas</a>
+                <a href="https://www.consumerbarometer.com/en/trending/?countryCode=AR&category=TRN-NOFILTER-ALL">aqui</a>
+              </p>
+              <ul class="fragment">
+                <li>Mobile First</li>
+                <li>Progressive enhancement</li>
+                <li>Gracefull Degradation</li>
+                <li>Adaptative Design</li>
+              </ul>
+              <img src="img/devices.png" width="50%" alt="" />
+            </section>
+            <section>
+              <h2>Responsive vs Adaptative</h2>
+              <p>
+                Cual es la diferencia ?
+              </p>
+              <img class="fragment" src="img/rwd-vs-adapt-example.gif" alt="" />
+            </section>
+            <section>
+              <h1>CSS: Media Queries</h1>
+              <code>@media </code>
+              <pre>
+                <code class="css">
+  @media print {
+    body { font-size: 10pt }
+  }
+  @media screen {
+    body { font-size: 13px }
+  }
+  @media screen, print {
+    body { line-height: 1.2 }
+  }
+  @media only screen
+    and (min-width: 320px)
+    and (max-device-width: 480px)  {
+      body { line-height: 1.4 }
+  }
+                </code>
+              </pre>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              <p>
+Modifcar el archivo  <a href="media-query.html">media-query.html</a>
+Agregar un header y un footer y agregar media querias para que
+
+              </p>
+              <ul>
+                <li>en la version de impresion no se muestre la barra de navegacion y sea todo blanco y negro</li>
+                <li>en dispositivos moviles de menos de 480px la pagina debe tener un formato lineal las secciones siguiendo un formato lineal, ademas agregar un margen superior e inferior de 20px entre los elementos section</li>
+                <li>en pantallas de mas de 1200px fijar el ancho a 1200px y agregar un margen automatico para completar el espacio sobrante</li>
+              </ul>
+            </section>
+            <section>
+              <h1>CSS Frameworks</h1>
+              <ul>
+                <li><a href="https://necolas.github.io/normalize.css/">Normalize.css</a></li>
+                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                <li><a href="http://foundation.zurb.com/">Foundation</a></li>
+              </ul>
+            </section>
+            <section>
+              <h1>Modelo de Grilla</h1>
+              <ul>
+                <li>ancho fijo 960 - 1200</li>
+                <li>ancho fluido</li>
+                <li>cantidad de columnas 12 - 16</li>
+                <li>un elemento siempre ocupa una cantidad entera de columnas</li>
+                <li>las columnas generalmente tienen un margen interno (gutter)</li>
+                <li>cada elemento en cada dispositivo ocupa una cantidad fija de columnas</li>
+              </ul>
+            </section>
+            <section>
+              <h1>medios</h1>
+
+              <div class="table-responsive"> <table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                <small>Phones (&lt;768px)</small>
+            </th>
+            <th>
+                <small>Tablets (≥768px)</small>
+            </th>
+            <th>
+                <small>Desktops (≥992px)</small>
+            </th>
+            <th>
+                <small>Desktops (≥1200px)</small>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <th class="text-nowrap" scope="row"> width</th>
+            <td>None (auto)</td>
+            <td>750px</td>
+            <td>970px</td>
+            <td>1170px</td>
+        </tr>
+        <tr>
+            <th class="text-nowrap" scope="row">Class</th>
+            <td>
+                <code>.col-xs-</code>
+            </td>
+            <td>
+                <code>.col-sm-</code>
+            </td>
+            <td>
+                <code>.col-md-</code>
+            </td>
+            <td>
+                <code>.col-lg-</code>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-nowrap" scope="row"># of cols</th>
+            <td colspan="4">12</td>
+        </tr>
+        <tr>
+            <th class="text-nowrap" scope="row">col width</th>
+            <td class="text-muted">Auto</td>
+            <td>~62px</td>
+            <td>~81px</td>
+            <td>~97px</td>
+        </tr>
+        <tr>
+            <th class="text-nowrap" scope="row">Gutter width</th>
+            <td colspan="4">30px (15px on each side of a column)</td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+            </section>
+            <section>
+              <h1>Columnas en Bootstrap</h1>
+              <ul>
+                <li><code>.container</code> o <code>.container-fluid</code>
+                  <ul>
+                    <li><code>.row</code>
+                    <ul>
+                      <li><code>.col</code></li>
+                    </ul></li>
+                  </ul>
+                </li>
+              </ul>
+              <p>
+                Clases Ej.:
+                <code>.col-xs-12</code>
+                  <code>.col-md-4</code>
+                  <code>.col-lg-1</code>
+              </p>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              <p>
+                Tomar los templates en imagen adjuntos y realizar el layout general para <a href="jumbotron/jumbotron.htm"> source</a>
+              </p>
+              <img src="img/desktop.png" height="300px" alt="" />
+              <img src="img/mobile.png" height="300px" alt="" />
+
+            </section>
+
+
+          </section>
+          <section>
+            <section>
+              <h1>Dependencias WEB</h1>
+              <div class="fragment">
+
+              <img src="img/bower-logo.svg" height="100px" alt="" />
+              <img src="img/npm-logo.svg" height="100px" alt="" />
+            </div>
+              <ul class="fragment">
+                <li><a href="https://bower.io/">Bower</a></li>
+                <li><a href="https://www.npmjs.com/">NPM</a></li>
+                <li><a href="https://getcomposer.org/doc/">Composer (PHP)</a></li>
+                <li><a href="https://rubygems.org/">RubyGems (Ruby)</a></li>
+                <li><a href="https://gradle.org/">Gradle (Java)</a></li>
+              </ul>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              <p>
+                Usando bower instalar bootstrap jquery, y vincularlo a una pagina web.
+              </p>
+            </section>
+            <section>
+              <h1>Algunas limitaciones de CSS</h1>
+            <ul class="fragment">
+              <li>Selector padre</li>
+              <li>calculos limitados</li>
+              <li>Falta de Modulos</li>
+              <li>Imposibilidad de reutilizar reglas</li>
+              <li>Calculo de expresiones</li>
+            </ul>
+          </section>
+
+            <section>
+              <h1>Preprocesadores</h1>
+                <p>
+                  <a href="http://less2css.org/">
+                    <img src="img/less.png" height="120px" alt="" />
+                  </a>
+                  <img src="img/sass.png" height="120px" alt="" />
+                </p>
+                <ul>
+                  <li>Realizar calculos de medidas, color, etc.</li>
+                  <li>Usar variables</li>
+                  <li>mixin y mixin parametricos</li>
+                  <li>Crear funciones simples</li>
+                  <li>Indentado de reglas</li>
+                  <li>Inclusion e importacion de reglas</li>
+                  <li>Referenciando al padre</li>
+                </ul>
+            </section>
+            <section>
+              <h1>LESS:Variables</h1>
+              <pre>
+                <code class="less">
+@ancho: 100px; // Definicion
+@alto: 200px;  // Definicion
+@total: @ancho + @alto; // Expresion
+@verdecito: &B8DEAB;
+
+.box {
+  width: @ancho;
+  height: @alto;
+  color: @verdecito;
+}
+.doble-box {
+  width: @ancho * 2;
+  margin-top: @alto / 2;
+}
+                </code>
+              </pre>
+            </section>
+            <section>
+              <h1>Var interpolation</h1>
+              <pre>
+                <code class="less">
+// Variables
+@my-selector: banner;
+@images: "../img";
+
+// Usage
+.@{my-selector} {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+  background: url("@{images}/white-sand.png");
+
+}
+
+                </code>
+              </pre>
+            </section>
+            <section>
+              <h1>LESS:Mixins</h1>
+              <pre>
+                <code class="less">@ancho: 100px; // Definicion
+@alto: 200px;  // Definicion
+
+.box-mixin {
+  width: @ancho;
+  color: @verdecito;
+}
+.box {
+  .box-mixin;
+  height: @alto;
+  color: @verdecito;
+}
+.doble-box {
+  .box-mixin;
+  height: @alto * 2;
+}</code>
+              </pre>
+            </section>
+            <section>
+              <h1>Mixins parametricos</h1>
+              <pre class="column-2">
+                <code class="less">
+.border-radius(@radius: 5px, @color: black) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+          border-color: @color
+}
+#header {
+  .border-radius; // parametros por defecto
+}
+#footer {
+  .border-radius(20px, red);
+}
+#menu {
+  .border-radius(@color: cyan);
+}</code>
+              </pre>
+              parametros
+            </section>
+            <section>
+              <h1>Mixin funciones</h1>
+              <p>
+                Las variables que definimos en un mixin se pueden usar en la regla que lo invoca.
+              </p>
+              <pre>
+                <code class="less">
+.average(@x, @y) {
+  @average: ((@x + @y) / 2);
+}
+
+div {
+  .average(16px, 50px); // "call" the mixin
+  padding: @average;    // use its "return" value
+}
+</code>
+              </pre>
+            </section>
+            <section>
+              <h1>Reglas libres</h1>
+              <pre>
+                <code class="less">
+  @reglas: { background: red; };
+
+  .top {
+      @reglas();
+  }
+// resultado
+.top {
+  background: red;
+}
+</code>
+              </pre>
+            </section>
+            <section>
+              <h1>Anidado de reglas</h1>
+              <pre><code class="html">
+<div class="articulo">
+  <div class="titulo">
+    Tecnicas avanzadas de desarrollo
+  </div>
+  <div class="cuerpo">
+    <img src="http://tecnicasavanzadas.com" alt="" />
+    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet.
+  </div>
+
+</div>
+</code></pre>
+            </section>
+            <section>
+              <h1>Anidado de reglas</h1>
+              <pre class="fragment">
+                <code class="less">
+.articulo {
+  color: black;
+  width: 75%;
+}
+.articulo .titulo {
+  font-size: large;
+  color: gray;
+}
+.articulo .cuerpo {
+  font-size: medium;
+}
+.articulo .cuerpo img {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+// Anidado
+.articulo {
+  color: black;
+  width: 75%;
+  .titulo {
+    font-size: large;
+    color: gray;
+  }
+  .cuerpo {
+    font-size: medium;
+    img {
+      float: right;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+                </code>
+              </pre>
+            </section>
+            <section>
+              <h1>Functions</h1>
+              <a href="http://lesscss.org/functions/"> Less site function reference</a>
+              <pre>
+                <code class="less">
+@base: #f04615;
+  @width: 0.5;
+
+  .class {
+    width: percentage(@width); // returns `50%`
+    color: saturate(@base, 5%);
+    background-color: spin(lighten(@base, 25%), 8);
+  }</code>
+              </pre>
+            </section>
+            <section>
+              <h1>Less Scopes</h1>
+              <pre><code class="less">
+@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}</code></pre><pre><code class="less">@var: red;
+
+#page {
+  #header {
+    color: @var; // white
+  }
+  @var: white;
+}</code></pre>
+            </section>
+            <section>
+              <h1>Importando otros archivos</h1>
+              <pre><code class="less">.foo {
+  background: #900;
+}
+@import "this-is-valid.less";</code></pre>
+            </section>
+            <section>
+              <h1>less y bootstrap</h1>
+              <a href="http://getbootstrap.com/css/#less">Less y bootstrap</a>
+            </section>
+            <section>
+              <h1>Usar Less</h1>
+              <p>
+                compilador de linea de comandos lessc
+              </p>
+              <pre><code class="bash">npm install -g less</code></pre>
+              <pre><code class="bash">lessc lessfile.less styles-file.css</code></pre>
+              <p>
+                IDE: Atom y sublime tienen paquetes para compilar less al guardar el archivo
+              </p>
+              <p>
+                Usando grunt y gulp
+              </p>
+            </section>
+            <section>
+              <h1>Ejercicio</h1>
+              Definir mixins y estilos necesarios para que
+              <ul>
+                  <li>Cada heading h1..h6 tenga un borde inferior de 6px para el h1 y 1px para el h6 sucesivamente, ademas el color de cada heading debe ir aclarandose en un 5% tomando negro para el h1</li>
+                  <li>Crear una hoja de estilos less que importe el codigo less de bootstrap y redefina las variables para los colores, para que sean todos blanco y negro, que los bordes sean rectos, y tengan un aspecto flat.
+                  usar el codigo de <a href="http://getbootstrap.com/examples/theme/">http://getbootstrap.com/examples/theme/</a> como testigo</li>
+              </ul>
+
+            </section>
+          </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                center: false,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+.articulo {
+  color: black;
+  width: 75%;
+}
+.articulo .titulo {
+  font-size: large;
+  color: gray;
+}
+.articulo .cuerpo {
+  font-size: medium;
+}
+.articulo .cuerpo img {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
