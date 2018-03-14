@@ -47,9 +47,103 @@
                     <ol>
                       <li>Un esquema uniforme de nombres para localizar recursos en la Web (p.ej., URIs).</li>
                       <li>Protocolos, para acceder a recursos con nombre en la Web (p.ej., HTTP).</li>
-                      <li>Hipertexto, para navegar fácilmente entre recursos (p.ej., HTML).</li>
+                      <li>Hipertexto, para navegar fácilmente entre recursos (p.ej., HTML, DOM).</li>
                       </ol>
                   </section>
+                  <section>
+                    <h2>URI: Uniform Resource Identifier</h2>
+                    <pre>scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]</pre>
+                    Ejemplos
+                    <ul>
+                      <li>http://www.google.com</li>
+                      <li>https://andres.otaduy:mypassword@frro.utn.edu.ar/~aotaduy/test.php</li>
+                      <li>http://andres.otaduy:mypassword@frro.utn.edu.ar/~aotaduy/test.php</li>
+                      <li>ftp://example.org/resource.txt</li>
+                      <li>mailto:max@provider.com</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h2>Protocolo HTTP</h2>
+                    <ul>
+                      <li>Client - Server</li>
+                      <li>Request - Response</li>
+                      <li>Sin conexion</li>
+                      <li>Recursos a traves de URL's</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h2>HTTP Request</h2>
+                    <ul>
+                      <li>Verb</li>
+                      <li>Header</li>
+                      <li>Header Fields</li>
+                      <li>Body (opcional)</li>
+                    </ul>
+                    <pre>
+  GET /u/1819149?s=64&v=4 HTTP/1.1
+  Host: avatars0.githubusercontent.com
+  Pragma: no-cache
+  Cache-Control: no-cache
+  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) 
+  Accept: image/webp,image/apng,image/*,*/*;q=0.8
+  Referer: https://github.com/
+  Accept-Encoding: gzip, deflate, br
+  Accept-Language: en-US,en;q=0.9,es;q=0.8</pre>
+                    </section>
+                    <section>
+                        <h2>HTTP Verbs</h2>
+                        <ul>
+                          <li>GET</li>
+                          <li>POST</li>
+                          <li>HEAD</li>
+                          <li>PUT</li>
+                          <li>DELETE</li>
+                          <li>OPTIONS</li>
+                          <li>... <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Ver mas</a> </li>
+                        </ul>
+                        Algunos metodos son idempotentes como DELETE, y PUT
+                      </section>
+                    <section>
+                      <h2>HTTP Response</h2>
+                      <pre>Accept-Ranges:bytes
+Access-Control-Allow-Origin:*
+Cache-Control:max-age=300
+Connection:keep-alive
+Content-Length:2581
+Content-Security-Policy:default-src 'none'
+Content-Type:image/jpeg
+Date:Wed, 14 Mar 2018 20:03:17 GMT
+Expires:Wed, 14 Mar 2018 20:08:17 GMT
+Last-Modified:Mon, 26 Aug 2013 02:08:22 GMT
+Source-Age:2069
+Strict-Transport-Security:max-age=31557600
+Timing-Allow-Origin:https://github.com</pre>
+                      <ul>
+                        <li>Status line - Response Code</li>
+                        <li>Response Headers</li>
+                        <li>Body</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>HTTP Response codes</h2>
+                      <ul>
+                          <li>1xx Informational responses.</li>
+                          <li>2xx Success. (200-OK, 201-Created)</li>
+                          <li>3xx Redirection. (301-Moved Permanently)</li>
+                          <li>4xx Client errors.(400 Bad request, 401)</li>
+                          <li>5xx Server errors. (501 Not implemented, 500)</li>
+                      </ul>
+                    </section>
+                    <section>
+                      <h2>HTML y DOM</h2>
+                      <ul>
+                        <li>
+                            DOM es un conjunto de objetos que me permiten representar un documento web
+                        </li>
+                        <li>HTML y CSS nos permiten especificar la estructura y apariencia de estos documentos/objetos</li>
+                        <li>Javascript nos permite manipular el DOM y asignarle comportamiento a estos objetos</li>
+                      </ul>
+                    </section>
             <section data-markdown>
                 <script type="text/template">
                     #HTML, CSS, JS
@@ -58,7 +152,6 @@
                       - Tags, Elementos, Atributos
                       - Estructura de una pagina web
                 </script>
-
             </section>
             <section data-markdown>
                 <script type="text/template">
